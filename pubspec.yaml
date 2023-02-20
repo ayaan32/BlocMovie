@@ -1,4 +1,4 @@
-name: moviet
+name: album
 description: A new Flutter project.
 publish_to: 'none'
 version: 0.1.0
@@ -10,6 +10,7 @@ dependencies:
   equatable: ^2.0.5
   flutter:
     sdk: flutter
+  flutter_bloc: ^7.2.0
   http: ^0.13.5
 
 dev_dependencies:

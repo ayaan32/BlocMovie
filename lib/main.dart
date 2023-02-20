@@ -1,7 +1,9 @@
-import 'package:moviet/Screens/Movie_detail_screen.dart';
-import 'package:moviet/Screens/movie_screen.dart';
-import 'package:moviet/Screens/selection_screen.dart';
+import 'package:album/screens/albums_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+import 'api/services.dart';
+import 'bloc/bloc.dart';
 
 void main() {
   runApp(MyApp());
@@ -11,13 +13,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'moviet',
+      title: 'Flutter Bloc Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primaryColor: Color(0xFF203341),
+        primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: SelectionScreen(),
+      home: BlocProvider(
+        create: (context) => AlbumsBloc(albumsRepo: AlbumServices()),
+        child: AlbumsScreen(),
+      ),
     );
   }
 }

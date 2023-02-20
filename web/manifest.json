@@ -1,6 +1,6 @@
 {
-    "name": "moviet",
-    "short_name": "moviet",
+    "name": "album",
+    "short_name": "album",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
